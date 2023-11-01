@@ -37,7 +37,7 @@ export default function useFormSteps(steps: ReactElement[]) {
                 initial="hidden"
                 animate="visible"
                 exit="exit"
-                className="w-98"
+                className="w-98 smmax:w-80"
                 key={currentStep}
             >
                 {steps[currentStep]}

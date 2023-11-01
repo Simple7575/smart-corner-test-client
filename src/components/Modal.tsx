@@ -74,11 +74,11 @@ export default function Modal({
                 initial="hidden"
                 animate="visible"
                 exit="exit"
-                className="absolute top-0 right-0 bottom-0 left-0 bg-slate-500/70 flex items-center justify-center z-10"
+                className="absolute top-0 right-0 bottom-0 left-0 h-screen bg-slate-500/70 flex items-center justify-center z-10"
             >
                 <motion.div
                     variants={modalVariants}
-                    className="border border-accent rounded-md px-2 py-4 bg-base-100 max-w-lg flex flex-col items-center"
+                    className="border border-accent rounded-md px-2 py-4 bg-base-100 max-w-lg flex flex-col items-center smmax:w-80"
                 >
                     <h4 className="font-bold text-center text-neutral-content text-2xl mb-3">
                         Are you sure, you want to submit the survey?

@@ -16,9 +16,14 @@ export default {
                 128: "32rem",
             },
         },
+
+        screens: {
+            smmax: { max: "639px" },
+            // => @media (max-width: 639px) { ... }
+        },
     },
     plugins: [require("daisyui")],
     daisyui: {
-        themes: ["dracula"],
+        themes: ["wireframe", "dracula"],
     },
 };

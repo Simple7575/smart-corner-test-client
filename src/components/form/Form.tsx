@@ -13,6 +13,7 @@ import PersonalInformation from "./formSteps/PersonalInformation";
 import Birthday from "./formSteps/Birthday";
 import Gender from "./formSteps/Gender";
 import Modal from "../Modal";
+import ThemeSwap from "../ThemeSwap";
 
 // const initialFormData = {
 //     purchaseDVDPlayer: "",
@@ -105,10 +106,14 @@ export default function Form() {
                 )}
             </AnimatePresence>
             <form
-                className="flex flex-col justify-between items-center h-96 border border-accent rounded-md px-2 py-4 w-128"
+                className="flex flex-col justify-between items-center h-96 border border-accent rounded-md px-2 py-4 w-128 smmax:w-96"
                 onSubmit={handleSubmit(handleNext)}
             >
-                <div className="text-right w-full">{`${currentStep + 1} / ${steps.length}`}</div>
+                <div className="flex justify-between w-full">
+                    <ThemeSwap />
+                    {`${currentStep + 1} / ${steps.length}`}
+                </div>
+
                 <AnimatePresence mode="wait">{step}</AnimatePresence>
                 <div className="flex gap-x-2">
                     <button
