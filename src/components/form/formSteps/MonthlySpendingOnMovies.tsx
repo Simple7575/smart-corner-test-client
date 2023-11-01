@@ -13,7 +13,7 @@ export default function MonthlySpendingOnMovies({ register, errors }: props) {
             </h4>
 
             <label className="relative">
-                <p className="text-error absolute -top-6">
+                <p className="text-error absolute -top-7">
                     {errors.monthlySpendingOnMovies?.message?.toString()}
                 </p>
                 <input

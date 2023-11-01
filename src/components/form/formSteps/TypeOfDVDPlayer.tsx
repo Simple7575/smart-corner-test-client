@@ -12,7 +12,7 @@ export default function TypeOfDVDPlayer({ register, errors }: props) {
                 What type of DVD player do you own?
             </h4>
             <label className="text-accent relative">
-                <p className="text-error absolute -top-6">
+                <p className="text-error absolute -top-9">
                     {errors.typeOfDVDPlayer?.message?.toString()}
                 </p>
                 <select

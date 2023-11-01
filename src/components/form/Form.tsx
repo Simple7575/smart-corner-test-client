@@ -1,4 +1,4 @@
-import { MouseEvent, useState, useEffect } from "react";
+import { MouseEvent, useState } from "react";
 import { useForm, FieldValues } from "react-hook-form";
 import { AnimatePresence } from "framer-motion";
 import useFormSteps from "../../hooks/useFormSteps";
@@ -14,16 +14,16 @@ import Birthday from "./formSteps/Birthday";
 import Gender from "./formSteps/Gender";
 import Modal from "../Modal";
 
-const initialFormData = {
-    purchaseDVDPlayer: "",
-    interestInContentControl: "",
-    typeOfDVDPlayer: "",
-    purchaseOrRentPreference: "",
-    monthlySpendingOnMovies: "",
-    personalInformation: "",
-    birthday: "",
-    gender: "",
-};
+// const initialFormData = {
+//     purchaseDVDPlayer: "",
+//     interestInContentControl: "",
+//     typeOfDVDPlayer: "",
+//     purchaseOrRentPreference: "",
+//     monthlySpendingOnMovies: "",
+//     personalInformation: "",
+//     birthday: "",
+//     gender: "",
+// };
 
 export default function Form() {
     const form = useForm();
@@ -48,7 +48,7 @@ export default function Form() {
 
     const isLastStep = currentStep + 1 >= steps.length;
 
-    const handleNext = (data: FieldValues) => {
+    const handleNext = () => {
         if (isLastStep) {
             setIsMadalOpen(true);
         } else {
@@ -65,7 +65,10 @@ export default function Form() {
         try {
             setServerError("");
             setIsLoading(true);
-            const response = await axios.post("http://localhost:5000/save-survey", data);
+            const response = await axios.post(
+                "https://hatchling-ring.cyclic.app/save-survey",
+                data
+            );
             setIsLoading(false);
             setSuccessMessage("Survey has been successfully saved.");
             setTimeout(() => {
@@ -73,7 +76,7 @@ export default function Form() {
                 setIsMadalOpen(false);
                 resetSteps();
                 setSuccessMessage("");
-            }, 3000);
+            }, 2500);
             console.log("Response", response);
         } catch (error) {
             console.log("Error", error);
