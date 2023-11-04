@@ -23,7 +23,7 @@ const backdropVariants = {
     exit: {
         opacity: 0,
         transition: {
-            delay: 0.1,
+            delay: 0.2,
         },
     },
 };
@@ -111,9 +111,15 @@ export default function Modal({
                         </li>
                         <li className="border-b border-accent mb-2">
                             <strong className="font-bold text-neutral-content text-md">
-                                Do you mainly purchase or rent movies you view?
+                                What type of DVD player do you own?
                             </strong>
                             <p className="text-accent">{formValues.typeOfDVDPlayer}</p>
+                        </li>
+                        <li className="border-b border-accent mb-2">
+                            <strong className="font-bold text-neutral-content text-md">
+                                Do you mainly purchase or rent movies you view?
+                            </strong>
+                            <p className="text-accent">{formValues.purchaseOrRentPreference}</p>
                         </li>
                         <li className="border-b border-accent mb-2">
                             <strong className="font-bold text-neutral-content text-md">

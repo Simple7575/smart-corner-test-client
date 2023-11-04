@@ -120,9 +120,11 @@ export default function Form() {
                         className="btn btn-outline btn-accent btn-sm"
                         type="button"
                         onClick={() => previous()}
+                        disabled={Boolean(!currentStep)}
                     >
                         Back
                     </button>
+
                     <button className="btn btn-outline btn-accent btn-sm" type="submit">
                         {isLastStep ? "Complete Survey" : "Next"}
                     </button>
