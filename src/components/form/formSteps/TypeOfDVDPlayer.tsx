@@ -22,7 +22,7 @@ export default function TypeOfDVDPlayer({ register, errors }: props) {
                         required: "Please select one of the options.",
                     })}
                 >
-                    <option selected disabled value="">
+                    <option disabled value="">
                         Pleas select type of DVD player.
                     </option>
                     <option value="PC DVD-ROM">PC DVD-ROM</option>

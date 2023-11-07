@@ -21,7 +21,7 @@ export default function PurchaseOrRentPreference({ register, errors }: props) {
                         className="radio radio-sm radio-accent mx-1"
                         type="radio"
                         id="purchase"
-                        value="purchase"
+                        value="Purchase"
                         {...register("purchaseOrRentPreference", {
                             required: "Please select one of the options.",
                         })}
@@ -33,7 +33,7 @@ export default function PurchaseOrRentPreference({ register, errors }: props) {
                         className="radio radio-sm radio-accent mx-1"
                         type="radio"
                         id="rent"
-                        value="rent"
+                        value="Rent"
                         {...register("purchaseOrRentPreference")}
                     />
                     Rent.

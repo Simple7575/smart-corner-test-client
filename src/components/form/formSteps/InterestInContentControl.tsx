@@ -21,7 +21,7 @@ export default function InterestInContentControl({ register, errors }: props) {
                     <input
                         className="radio radio-sm radio-accent mx-1"
                         type="radio"
-                        value="yes"
+                        value="Yes"
                         id="yes"
                         {...register("interestInContentControl", {
                             required: "Please select one of the options.",
@@ -33,7 +33,7 @@ export default function InterestInContentControl({ register, errors }: props) {
                     <input
                         className="radio radio-sm radio-accent mx-1"
                         type="radio"
-                        value="no"
+                        value="No"
                         id="no"
                         {...register("interestInContentControl")}
                     />
@@ -43,7 +43,7 @@ export default function InterestInContentControl({ register, errors }: props) {
                     <input
                         className="radio radio-sm radio-accent mx-1"
                         type="radio"
-                        value="not-sure"
+                        value="Not-sure"
                         id="not-sure"
                         {...register("interestInContentControl")}
                     />

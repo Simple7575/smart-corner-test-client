@@ -12,7 +12,7 @@ import MonthlySpendingOnMovies from "./formSteps/MonthlySpendingOnMovies";
 import PersonalInformation from "./formSteps/PersonalInformation";
 import Birthday from "./formSteps/Birthday";
 import Gender from "./formSteps/Gender";
-import Modal from "../Modal";
+import Modal from "../modal/Modal";
 import ThemeSwap from "../ThemeSwap";
 
 // const initialFormData = {

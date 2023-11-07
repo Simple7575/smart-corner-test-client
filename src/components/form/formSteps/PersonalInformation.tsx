@@ -61,6 +61,7 @@ export default function PersonalInformation({ register, errors }: props) {
                         className="input input-accent input-sm"
                         type="email"
                         id="email"
+                        autoComplete="email"
                         {...register("personalInformation.email", {
                             required: "This field is required.",
                             validate: (value) => value.length <= 250 || "Max 250 characters.",
